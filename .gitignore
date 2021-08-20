@@ -1,0 +1,5 @@
+.env
+.auth*
+.nohup*
+info.txt
+venv/
