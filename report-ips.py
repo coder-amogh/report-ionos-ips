@@ -299,6 +299,7 @@ if auth_configs["work"]:
 		# Copy all the log files in the filepaths to a new directory
 		for file in auth_configs["filepaths"]:
 			os.system(f'cp {file} {NEW_MKDIR_NAME}/')
+			os.system(f'truncate -s 0 {file}')
 
 		os.system(f"zip -r {ZIP_FILE_NAME} {NEW_MKDIR_NAME}")
 
