@@ -21,10 +21,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-print(os.environ)
-
-sys.exit()
-
 class Mailer:
 	def __init__(self, hostname = os.environ.get("EMAIL_HOSTNAME"), port = int(os.environ.get("EMAIL_PORT")), username = os.environ.get("EMAIL_USERNAME"), password = os.environ.get("EMAIL_PASSWORD"), from_name = os.environ.get("EMAIL_FROM_NAME")):
 		'''
@@ -211,6 +207,10 @@ if nohup_configs["work"]:
 					Attached is the ZIP file of network access logs (apache or nginx or frameworks like FastAPI) through which this script has identified few of the IPs which belong to IONOS and are trying to hack my server's password thereby gaining access to my server and doing some damage which might affect me. 
 				</p>
 
+				<p>
+					This script is based on: https://github.com/coder-amogh/report-ionos-ips
+				</p>
+
 				<p>Hope you will take these weekly automated reports seriously and take required action on it.</p>
 
 				<hr>
@@ -311,6 +311,10 @@ if auth_configs["work"]:
 			<body>
 				<p>
 					Attached is the ZIP file of SSH failed password access logs through which this script has identified few of the IPs which belong to IONOS and are trying to hack my server's password thereby gaining access to my server and doing some damage which might affect me. 
+				</p>
+
+				<p>
+					This script is based on: https://github.com/coder-amogh/report-ionos-ips
 				</p>
 
 				<p>Hope you will take these weekly automated reports seriously and take required action on it.</p>
